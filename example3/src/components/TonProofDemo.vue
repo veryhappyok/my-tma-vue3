@@ -69,6 +69,7 @@ export default {
     };
 
     const recreateProofPayload = async () => {
+      console.log("tonConnectUI: ", tonConnectUI);
       if (tonConnectUI) {
         const payload = await TonProofDemoApi.generatePayload();
         tonConnectUI.setConnectRequestParameters(payload ? { state: "ready", value: payload } : null);
